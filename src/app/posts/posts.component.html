@@ -1,0 +1,15 @@
+<div class="container">  
+  <div class="posts-search">
+      <input class="form-control col-3" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm">
+  </div>
+  <div class="posts">
+    <ul>
+      <li *ngFor="let post of posts | postsFilter : searchTerm : 'title'" (click)="test()">
+        <p>
+          <small class="post-user">{{post.user.name}}</small>
+        </p>
+        <p>{{post.title}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
