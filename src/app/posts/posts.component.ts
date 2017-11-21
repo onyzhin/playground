@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PostsService } from './posts.service';
 import { UsersService } from './../users/users.service';
 
@@ -10,10 +11,12 @@ import { UsersService } from './../users/users.service';
 export class PostsComponent implements OnInit {
   posts: any;
   searchTerm: string;
+  count: number;
 
   constructor(
     public postsService: PostsService,
-    public usersService: UsersService
+    public usersService: UsersService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -29,11 +32,5 @@ export class PostsComponent implements OnInit {
         this.posts = posts;
       });
     });
-  }
-
-  onSearch(term) {}
-
-  test(): void {
-    console.log('test');
   }
 }

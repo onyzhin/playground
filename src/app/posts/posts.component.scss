@@ -9,13 +9,17 @@
     padding: 0;
     li {
       list-style: none;
-      padding-bottom: 20px;
-      margin-bottom: 20px;  
+      border-bottom: 1px solid rgb(209, 209, 209);
+      a {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        padding: 15px 10px 20px 10px;
+        &:hover {
+          background: #f3f3f378;
+        }
+      }
     }
     padding: 0;
-    li:not(:last-child) {
-      list-style: none;
-      border-bottom: 1px solid rgb(209, 209, 209);
-    }
   }
 }

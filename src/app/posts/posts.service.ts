@@ -19,4 +19,11 @@ export class PostsService {
       .map((res: Response) => res.json());
   }
 
+  public getPost(id) {
+    const req = '';
+    return this.http
+      .get(`${this.api}/posts/${id}`)
+      .map((res: Response) => res.json());
+  }
+
 }
