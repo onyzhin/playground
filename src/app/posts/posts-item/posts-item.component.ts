@@ -38,7 +38,7 @@ export class PostsItemComponent implements OnInit {
     });
 
     this.postBusService.currentNumber
-      .debounceTime(200)
+      .debounceTime(100)
       .distinctUntilChanged()
       .subscribe(number => (this.count = number));
   }
