@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class PostBusService {
-  currentNumber: Subject<Number> = new Subject<Number>();
+  currentNumber: BehaviorSubject<Number> = new BehaviorSubject(0);
 
   constructor() {}
 }
